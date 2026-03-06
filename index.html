@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hope | Software to Machine Learning Engineer</title>
+  <!-- Google Fonts as per Design System -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <!-- AI-Native Floating Nav -->
+  <nav class="floating-nav">
+    <div class="nav-content">
+      <span class="logo">HOPE_AI</span>
+      <ul class="nav-links">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="app">
+    <!-- 1. Hero Section -->
+    <header class="hero section" id="home">
+      <div class="hero-content">
+        <div class="ai-badge">System Ready</div>
+        <h1 class="hero-title">Hope</h1>
+        <p class="hero-subtitle">Software Engineer <span class="arrow">→</span> Machine Learning</p>
+        <div class="typing-container">
+          <span class="typing-text" id="ai-greeting"></span><span class="typing-cursor"></span>
+        </div>
+        <div class="typing-indicator" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </header>
+
+    <main class="content-grid">
+      <!-- 2. Project Grid -->
+      <section id="projects" class="section">
+        <h2 class="section-title">Achievements & Activities</h2>
+        <div class="masonry-grid">
+          <!-- Project Card 1 -->
+          <a href="https://www.kaggle.com/millak" target="_blank" rel="noopener noreferrer" class="card project-card">
+            <div class="card-image-placeholder">Kaggle Expert</div>
+            <div class="card-content">
+              <h3>Kaggle Competitions</h3>
+              <p>Fine-tuned LLMs using QLoRA and built simple time-series models.</p>
+              <div class="tags">
+                <span class="tag">LLM</span>
+                <span class="tag">QLoRA</span>
+                <span class="tag">Time-Series</span>
+              </div>
+            </div>
+          </a>
+          <!-- Project Card 2 -->
+          <a href="https://www.guruguru.science/competitions/19" target="_blank" rel="noopener noreferrer"
+            class="card project-card">
+            <div class="card-image-placeholder">atmaCup</div>
+            <div class="card-content">
+              <h3>ID-POS Data Analysis</h3>
+              <p>Analyzed ID-POS data to uncover actionable insights.</p>
+              <div class="tags">
+                <span class="tag">Data Analysis</span>
+                <span class="tag">ID-POS</span>
+              </div>
+            </div>
+          </a>
+          <!-- Project Card 3 -->
+          <a href="https://certification.scrumalliance.org/accounts/1809501/certifications/2163702" target="_blank"
+            rel="noopener noreferrer" class="card project-card">
+            <div class="card-image-placeholder">Scrum Master</div>
+            <div class="card-content">
+              <h3>Certified ScrumMaster®</h3>
+              <p>Facilitating agile methodologies and maximizing team value.</p>
+              <div class="tags">
+                <span class="tag">Agile</span>
+                <span class="tag">Scrum</span>
+              </div>
+            </div>
+          </a>
+          <!-- Project Card 4 -->
+          <a href="https://atcoder.jp/users/makinzm2" target="_blank" rel="noopener noreferrer"
+            class="card project-card">
+            <div class="card-image-placeholder" style="color: #008000; background-color: rgba(0, 128, 0, 0.1);">AtCoder
+            </div>
+            <div class="card-content">
+              <h3>Competitive Programming</h3>
+              <p>Ranked Green in AtCoder, demonstrating strong algorithm skills.</p>
+              <div class="tags">
+                <span class="tag">Algorithms</span>
+                <span class="tag">Data Structures</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- 3. About/Philosophy -->
+      <section id="about" class="section">
+        <h2 class="section-title">About Me & Philosophy</h2>
+        <div class="about-container">
+          <div class="about-text card ai-context-card">
+            <p>
+              働く軸として、<strong>「ユーザーの課題を解決するかどうか」</strong>を意識したプロダクト作りを大切にしています。スクラムマスターとしての経験も活かし、チーム全体で価値を最大化できる開発を推進します。<br><br>Currently
+              transitioning from software development into the world of Machine Learning.</p>
+          </div>
+          <div class="interests-container card">
+            <h3>Interests</h3>
+            <ul class="interests-list">
+              <li><span class="icon" aria-hidden="true">⛰️</span> Hiking (山登り)</li>
+              <li><span class="icon" aria-hidden="true">🎵</span> Music (音楽)</li>
+              <li><span class="icon" aria-hidden="true">📊</span> Statistics (統計学)</li>
+              <li><span class="icon" aria-hidden="true">🏃</span> Running (ランニング)</li>
+              <li><span class="icon" aria-hidden="true">⚽</span> Futsal (フットサル)</li>
+              <li><span class="icon" aria-hidden="true">📝</span> English Learning (英語学習)</li>
+              <li><span class="icon" aria-hidden="true">📚</span> Reading (読書)</li>
+              <li><span class="icon" aria-hidden="true">💃</span> Dance (ダンス)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 4. Contact Footer -->
+    <footer class="footer section" id="contact">
+      <div class="footer-content">
+        <h2 class="section-title">Let's Connect</h2>
+        <p>Open for opportunities in Machine Learning Engineering.</p>
+        <a href="mailto:contact@example.com" class="btn-primary">Initialize Contact sequence</a>
+      </div>
+    </footer>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
