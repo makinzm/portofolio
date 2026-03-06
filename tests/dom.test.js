@@ -16,9 +16,9 @@ describe('Portfolio DOM Structure', () => {
 
     it('contains the correct interests', () => {
         const textContext = document.body.textContent;
-        expect(textContext).toContain('山登り');
-        expect(textContext).toContain('統計学');
-        expect(textContext).toContain('ランニング');
+        expect(textContext).toContain('Hiking');
+        expect(textContext).toContain('Statistics');
+        expect(textContext).toContain('Running');
     });
 
     it('contains the AI typing indicator', () => {
