@@ -38,4 +38,21 @@ describe('Portfolio UI/UX Improvements', () => {
     it('skips the typing indicator rendering', () => {
         expect(document.querySelector('.typing-indicator')).toBeNull();
     });
+
+    it('ensures Statistics and Futsal are non-interactive', () => {
+        const listItems = Array.from(document.querySelectorAll('.interests-list li'));
+        const statsItem = listItems.find(li => li.textContent.includes('Statistics'));
+        const futsalItem = listItems.find(li => li.textContent.includes('Futsal'));
+        expect(statsItem.classList.contains('non-interactive')).toBe(true);
+        expect(futsalItem.classList.contains('non-interactive')).toBe(true);
+    });
+
+    it('ensures the X button uses a class instead of inline dark styling', () => {
+        const xButton = document.querySelector('a[href*="x.com"]');
+        expect(xButton).toBeDefined();
+        if (xButton) {
+            expect(xButton.getAttribute('style')).toBeNull();
+            expect(xButton.classList.contains('btn-dark')).toBe(true);
+        }
+    });
 });

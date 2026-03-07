@@ -67,7 +67,7 @@ const resources = {
             "nav.activities": "活動",
             "nav.about": "自己紹介",
             "nav.contact": "連絡先",
-            "hero.badge": "システム準備完了",
+            "hero.badge": "System Ready",
             "hero.subtitle1": "ソフトウェアエンジニア",
             "hero.subtitle2": "機械学習エンジニア",
             "activities.title": "実績と活動",
@@ -125,7 +125,11 @@ const resources = {
 };
 
 // Initialize i18next
-const savedLang = localStorage.getItem('lang') || 'en';
+let defaultLang = 'en';
+if (navigator.language && navigator.language.startsWith('ja')) {
+    defaultLang = 'ja';
+}
+const savedLang = localStorage.getItem('lang') || defaultLang;
 i18next.init({
     lng: savedLang,
     resources,
@@ -162,7 +166,11 @@ function updateLangButton() {
 
 // Theme toggling
 const themeToggleBtn = document.getElementById('theme-toggle');
-const currentTheme = localStorage.getItem('theme') || 'light';
+let defaultTheme = 'light';
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    defaultTheme = 'dark';
+}
+const currentTheme = localStorage.getItem('theme') || defaultTheme;
 document.documentElement.setAttribute('data-theme', currentTheme);
 
 if (themeToggleBtn) {
