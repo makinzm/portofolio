@@ -335,7 +335,7 @@ a:hover {
     align-items: center;
     gap: var(--space-sm);
     padding: var(--space-sm);
-    background: var(--color-surface);
+    background: var(--color-background);
     border-radius: 8px;
     transition: transform 200ms ease;
     cursor: pointer;
