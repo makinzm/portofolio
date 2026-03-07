@@ -21,10 +21,6 @@ describe('Portfolio DOM Structure', () => {
         expect(textContext).toContain('Running');
     });
 
-    it('contains the AI typing indicator', () => {
-        expect(document.querySelector('.typing-indicator')).not.toBeNull();
-    });
-
     it('contains correctly linked stylesheets', () => {
         const scripts = Array.from(document.querySelectorAll('script[type="module"]'));
         const hasMainJs = scripts.some(s => s.getAttribute('src').includes('main.js'));

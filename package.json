@@ -10,8 +10,12 @@
     "test": "vitest run"
   },
   "devDependencies": {
+    "@testing-library/dom": "^10.4.1",
     "jsdom": "^28.1.0",
     "vite": "^7.3.1",
     "vitest": "^4.0.18"
+  },
+  "dependencies": {
+    "i18next": "^25.8.14"
   }
 }

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nozomi Maki | Software to Machine Learning Engineer</title>
+  <title>Nozomi Maki | Portofolio</title>
+  <link rel="icon" type="image/png" href="./favicon.png" />
   <!-- Google Fonts as per Design System -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,8 +21,13 @@
     <div class="nav-content">
       <span class="logo">NOZOMI MAKI</span>
       <ul class="nav-links">
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="#activities" data-i18n="nav.activities">Activities</a></li>
+        <li><a href="#about" data-i18n="nav.about">About</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        <li style="display: flex; gap: 8px;">
+          <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">🌙</button>
+          <button id="lang-toggle" class="icon-btn" aria-label="Toggle language">JP</button>
+        </li>
       </ul>
     </div>
   </nav>
@@ -30,29 +36,28 @@
     <!-- 1. Hero Section -->
     <header class="hero section" id="home">
       <div class="hero-content">
-        <div class="ai-badge">System Ready</div>
+        <div class="ai-badge" data-i18n="hero.badge">System Ready</div>
         <h1 class="hero-title">Nozomi Maki</h1>
-        <p class="hero-subtitle">Software Engineer <span class="arrow">→</span> Machine Learning</p>
+        <p class="hero-subtitle"><span data-i18n="hero.subtitle1">Software Engineer</span> <span class="arrow">→</span>
+          <span data-i18n="hero.subtitle2">Machine Learning Engineer</span>
+        </p>
         <div class="typing-container">
           <span class="typing-text" id="ai-greeting"></span><span class="typing-cursor"></span>
-        </div>
-        <div class="typing-indicator" aria-hidden="true">
-          <span></span><span></span><span></span>
         </div>
       </div>
     </header>
 
     <main class="content-grid">
       <!-- 2. Project Grid -->
-      <section id="projects" class="section">
-        <h2 class="section-title">Achievements & Activities</h2>
+      <section id="activities" class="section">
+        <h2 class="section-title" data-i18n="activities.title">Achievements & Activities</h2>
         <div class="masonry-grid">
           <!-- Project Card 1 -->
           <a href="https://www.kaggle.com/millak" target="_blank" rel="noopener noreferrer" class="card project-card">
             <div class="card-image-placeholder">Kaggle Expert</div>
             <div class="card-content">
-              <h3>Kaggle Competitions <span class="external-badge">↗</span></h3>
-              <p>Fine-tuned LLMs using QLoRA and built simple time-series models.</p>
+              <h3><span data-i18n="card1.title">Kaggle Competitions</span> <span class="external-badge">↗</span></h3>
+              <p data-i18n="card1.desc">Fine-tuned LLMs using QLoRA and built simple time-series models.</p>
               <div class="tags">
                 <span class="tag">LLM</span>
                 <span class="tag">QLoRA</span>
@@ -65,10 +70,10 @@
             class="card project-card">
             <div class="card-image-placeholder">atmaCup</div>
             <div class="card-content">
-              <h3>ID-POS Data Analysis <span class="external-badge">↗</span></h3>
-              <p>Analyzed ID-POS data to uncover actionable insights.</p>
+              <h3><span data-i18n="card2.title">ID-POS Data Analysis</span> <span class="external-badge">↗</span></h3>
+              <p data-i18n="card2.desc">Analyzed ID-POS data to uncover actionable insights.</p>
               <div class="tags">
-                <span class="tag">Data Analysis</span>
+                <span class="tag" data-i18n="card2.tag1">Data Analysis</span>
                 <span class="tag">ID-POS</span>
               </div>
             </div>
@@ -78,20 +83,20 @@
             rel="noopener noreferrer" class="card project-card">
             <div class="card-image-placeholder">Scrum Master</div>
             <div class="card-content">
-              <h3>Certified ScrumMaster® <span class="external-badge">↗</span></h3>
-              <p>Facilitating agile methodologies and maximizing team value.</p>
+              <h3><span data-i18n="card3.title">Certified ScrumMaster®</span> <span class="external-badge">↗</span></h3>
+              <p data-i18n="card3.desc">Facilitating agile methodologies and maximizing team value.</p>
               <div class="tags">
-                <span class="tag">Agile</span>
+                <span class="tag" data-i18n="card3.tag1">Agile</span>
                 <span class="tag">Scrum</span>
               </div>
             </div>
           </a>
           <!-- Project Card 4 -->
-          <article class="card project-card">
+          <article class="card project-card non-interactive">
             <div class="card-image-placeholder">In-house Dev</div>
             <div class="card-content">
-              <h3>In-house Software Engineer</h3>
-              <p>Developed internal software solutions and product features.</p>
+              <h3 data-i18n="card4.title">In-house Software Engineer</h3>
+              <p data-i18n="card4.desc">Developed internal software solutions and product features.</p>
               <div class="tags">
                 <span class="tag">Go</span>
                 <span class="tag">TypeScript</span>
@@ -105,21 +110,23 @@
             <div class="card-image-placeholder" style="color: #008000; background-color: rgba(0, 128, 0, 0.1);">AtCoder
             </div>
             <div class="card-content">
-              <h3>Competitive Programming <span class="external-badge">↗</span></h3>
-              <p>Ranked Green in AtCoder, demonstrating strong algorithm skills.</p>
+              <h3><span data-i18n="card5.title">Competitive Programming</span> <span class="external-badge">↗</span>
+              </h3>
+              <p data-i18n="card5.desc">Ranked Green in AtCoder, demonstrating strong algorithm skills.</p>
               <div class="tags">
-                <span class="tag">Algorithms</span>
-                <span class="tag">Data Structures</span>
+                <span class="tag" data-i18n="card5.tag1">Algorithms</span>
+                <span class="tag" data-i18n="card5.tag2">Data Structures</span>
               </div>
             </div>
           </a>
-          <!-- Project Card 5 -->
+          <!-- Project Card 6 -->
           <a href="https://qiita.com/making111" target="_blank" rel="noopener noreferrer" class="card project-card">
             <div class="card-image-placeholder" style="color: #55c500; background-color: rgba(85, 197, 0, 0.1);">Qiita
             </div>
             <div class="card-content">
-              <h3>Technical Articles <span class="external-badge">↗</span></h3>
-              <p>Writing articles sharing knowledge about Go, Rust, Terraform, Kubernetes, and Flink.</p>
+              <h3><span data-i18n="card6.title">Technical Articles</span> <span class="external-badge">↗</span></h3>
+              <p data-i18n="card6.desc">Writing articles sharing knowledge about Go, Rust, Terraform, Kubernetes, and
+                Flink.</p>
               <div class="tags">
                 <span class="tag">Go / Rust</span>
                 <span class="tag">K8s</span>
@@ -132,40 +139,51 @@
 
       <!-- 3. About/Philosophy -->
       <section id="about" class="section">
-        <h2 class="section-title">About Me & Philosophy</h2>
+        <h2 class="section-title" data-i18n="about.title">About Me & Philosophy</h2>
         <div class="about-container">
           <div class="about-text card ai-context-card">
-            <p>
+            <p data-i18n="about.desc">
               My core philosophy as an engineer is to build products that genuinely <strong>solve user
                 problems</strong>. Leveraging my experience as a Scrum Master, I drive development processes that
               maximize value across the entire team.<br><br>Currently transitioning from software development into the
               world of Machine Learning and Data Science.</p>
-            <h3 style="margin-top: 1rem;">Research & Publications</h3>
+            <h3 style="margin-top: 1rem;" data-i18n="about.research">Research & Publications</h3>
             <p style="font-size: 0.9rem; border-left: 3px solid var(--color-cta); padding-left: 8px; margin-top: 8px;">
               Maki, Nozomi, and Sumio Watanabe. "Effect of Prior Distribution when Data-Generating Process is in a
               Neighborhood of Singularities of Learning Machines." <i>IEICE Technical Report; IEICE Tech. Rep. 122.325
                 (2022)</i>: 18-23. <a href="https://ken.ieice.org/ken/paper/20221222JCpe/eng/" target="_blank"
-                rel="noopener noreferrer">[Link]</a>
+                rel="noopener noreferrer" data-i18n="about.link">[Link]</a>
             </p>
           </div>
           <div class="interests-container card">
-            <h3 style="margin-bottom: 24px;">Interests</h3>
+            <h3 style="margin-bottom: 24px;" data-i18n="interests.title">Interests</h3>
             <ul class="interests-list">
               <li class="modal-trigger" data-target="modal-hiking"><span class="icon" aria-hidden="true">⛰️</span>
-                Hiking <span class="action-hint">[View]</span></li>
-              <li class="modal-trigger" data-target="modal-music"><span class="icon" aria-hidden="true">🎵</span> Music
-                <span class="action-hint">[Listen]</span>
+                <span data-i18n="interests.hiking">Hiking</span> <span class="action-hint"
+                  data-i18n="action.view">[View]</span>
               </li>
-              <li><span class="icon" aria-hidden="true">📊</span> Statistics</li>
+              <li class="modal-trigger" data-target="modal-music"><span class="icon" aria-hidden="true">🎵</span> <span
+                  data-i18n="interests.music">Music</span>
+                <span class="action-hint" data-i18n="action.listen">[Listen]</span>
+              </li>
+              <li class="non-interactive"><span class="icon" aria-hidden="true">📊</span> <span
+                  data-i18n="interests.stats">Statistics</span></li>
               <li class="modal-trigger" data-target="modal-running"><span class="icon" aria-hidden="true">🏃</span>
-                Running <span class="action-hint">[Recs]</span></li>
-              <li><span class="icon" aria-hidden="true">⚽</span> Futsal</li>
+                <span data-i18n="interests.running">Running</span> <span class="action-hint"
+                  data-i18n="action.recs">[Recs]</span>
+              </li>
+              <li class="non-interactive"><span class="icon" aria-hidden="true">⚽</span> <span
+                  data-i18n="interests.futsal">Futsal</span></li>
               <li class="modal-trigger" data-target="modal-english"><span class="icon" aria-hidden="true">📝</span>
-                English Learning <span class="action-hint">[Cert]</span></li>
+                <span data-i18n="interests.english">English Learning</span> <span class="action-hint"
+                  data-i18n="action.cert">[Cert]</span>
+              </li>
               <li class="external-link" onclick="window.open('https://bookmeter.com/users/1409315', '_blank')"><span
-                  class="icon" aria-hidden="true">📚</span> Reading <span class="action-hint">[Ext ↗]</span></li>
-              <li class="modal-trigger" data-target="modal-dance"><span class="icon" aria-hidden="true">💃</span> Dance
-                <span class="action-hint">[Info]</span>
+                  class="icon" aria-hidden="true">📚</span> <span data-i18n="interests.reading">Reading</span> <span
+                  class="action-hint" data-i18n="action.ext">[Ext ↗]</span></li>
+              <li class="modal-trigger" data-target="modal-dance"><span class="icon" aria-hidden="true">💃</span> <span
+                  data-i18n="interests.dance">Dance</span>
+                <span class="action-hint" data-i18n="action.info">[Info]</span>
               </li>
             </ul>
           </div>
@@ -176,12 +194,12 @@
     <!-- 4. Contact Footer -->
     <footer class="footer section" id="contact">
       <div class="footer-content">
-        <h2 class="section-title">Let's Connect</h2>
-        <p style="margin-bottom: 24px;">Follow me on GitHub or X to stay updated.</p>
+        <h2 class="section-title" data-i18n="contact.title">Let's Connect</h2>
+        <p style="margin-bottom: 24px;" data-i18n="contact.desc">Follow me on GitHub or X to stay updated.</p>
         <div style="display: flex; gap: 16px; justify-content: center;">
           <a href="https://github.com/makinzm" target="_blank" rel="noopener noreferrer" class="btn-primary">GitHub</a>
-          <a href="https://x.com/NozomiMaki2" target="_blank" rel="noopener noreferrer" class="btn-primary"
-            style="background:#0F172A;">X (Twitter)</a>
+          <a href="https://x.com/NozomiMaki2" target="_blank" rel="noopener noreferrer" class="btn-primary btn-dark">X
+            (Twitter)</a>
         </div>
       </div>
     </footer>
@@ -190,48 +208,49 @@
   <!-- Dialogs for Interactions -->
   <dialog id="modal-hiking" class="modal">
     <div class="modal-content">
-      <h3 style="margin-bottom: 16px;">Hiking</h3>
-      <p>日光 男体山</p>
-      <p>神奈川 大山</p>
-      <button class="btn-secondary" style="margin-top: 24px;" autofocus>Close</button>
+      <h3 style="margin-bottom: 16px;" data-i18n="modal.hiking.title">Hiking</h3>
+      <p data-i18n="modal.hiking.p1">日光 男体山</p>
+      <p data-i18n="modal.hiking.p2">神奈川 大山</p>
+      <button class="btn-secondary" style="margin-top: 24px;" autofocus data-i18n="modal.close">Close</button>
     </div>
   </dialog>
 
   <dialog id="modal-running" class="modal">
     <div class="modal-content">
-      <h3 style="margin-bottom: 16px;">Running - Personal Bests</h3>
+      <h3 style="margin-bottom: 16px;" data-i18n="modal.running.title">Running - Personal Bests</h3>
       <ul>
-        <li><strong>Half Marathon:</strong> 2:02:52</li>
-        <li><strong>10km:</strong> 43:10</li>
+        <li><strong data-i18n="modal.running.half">Half Marathon:</strong> 2:02:52</li>
+        <li><strong data-i18n="modal.running.10k">10km:</strong> 43:10</li>
       </ul>
-      <button class="btn-secondary" style="margin-top: 24px;" autofocus>Close</button>
+      <button class="btn-secondary" style="margin-top: 24px;" autofocus data-i18n="modal.close">Close</button>
     </div>
   </dialog>
 
   <dialog id="modal-english" class="modal">
     <div class="modal-content">
-      <h3 style="margin-bottom: 16px;">English Learning</h3>
-      <p>Eiken Grade Pre-1</p>
-      <button class="btn-secondary" style="margin-top: 24px;" autofocus>Close</button>
+      <h3 style="margin-bottom: 16px;" data-i18n="modal.english.title">English Learning</h3>
+      <p data-i18n="modal.english.p1">Eiken Grade Pre-1</p>
+      <button class="btn-secondary" style="margin-top: 24px;" autofocus data-i18n="modal.close">Close</button>
     </div>
   </dialog>
 
   <dialog id="modal-dance" class="modal">
     <div class="modal-content">
-      <h3 style="margin-bottom: 16px;">Dance</h3>
-      <p>Some experience in Lock and Hiphop.</p>
-      <button class="btn-secondary" style="margin-top: 24px;" autofocus>Close</button>
+      <h3 style="margin-bottom: 16px;" data-i18n="modal.dance.title">Dance</h3>
+      <p data-i18n="modal.dance.p1">Some experience in Lock and Hiphop.</p>
+      <button class="btn-secondary" style="margin-top: 24px;" autofocus data-i18n="modal.close">Close</button>
     </div>
   </dialog>
 
   <dialog id="modal-music" class="modal">
     <div class="modal-content" style="padding: 16px;">
-      <h3 style="margin-bottom: 16px;">Music</h3>
+      <h3 style="margin-bottom: 16px;" data-i18n="modal.music.title">Music</h3>
       <iframe style="border-radius:12px"
         src="https://open.spotify.com/embed/playlist/5fQGZNe2vj10iduICZzpoJ?utm_source=generator" width="100%"
         height="352" frameBorder="0" allowfullscreen=""
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      <button class="btn-secondary" style="margin-top: 16px; width: 100%;" autofocus>Close</button>
+      <button class="btn-secondary" style="margin-top: 16px; width: 100%;" autofocus
+        data-i18n="modal.close">Close</button>
     </div>
   </dialog>
 
