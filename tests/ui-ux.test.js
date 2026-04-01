@@ -55,4 +55,12 @@ describe('Portfolio UI/UX Improvements', () => {
             expect(xButton.classList.contains('btn-dark')).toBe(true);
         }
     });
+
+    it('prevents mobile horizontal overflow via CSS', () => {
+        const cssContent = fs.readFileSync(path.resolve(__dirname, '../style.css'), 'utf-8');
+        expect(cssContent).toMatch(/html\s*\{[^}]*overflow-x:\s*hidden/);
+        expect(cssContent).toMatch(/body\s*\{[^}]*overflow-x:\s*hidden/);
+        // Also check masonry grid tweak
+        expect(cssContent).toMatch(/minmax\(min\(100%,\s*300px\)/);
+    });
 });
