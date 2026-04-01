@@ -272,7 +272,8 @@ if (mobileMenuBtn && navLinks) {
         mobileMenuBtn.innerHTML = hamburgerSVG;
     };
 
-    mobileMenuBtn.addEventListener('click', () => {
+    mobileMenuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
         const isOpen = navLinks.classList.contains('menu-open');
         if (isOpen) {
             closeMenu();
