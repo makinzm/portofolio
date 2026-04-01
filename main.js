@@ -287,4 +287,13 @@ if (mobileMenuBtn && navLinks) {
     navLinks.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', closeMenu);
     });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (navLinks.classList.contains('menu-open')) {
+            if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                closeMenu();
+            }
+        }
+    });
 }
