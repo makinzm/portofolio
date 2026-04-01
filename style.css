@@ -52,6 +52,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -59,6 +60,7 @@ body {
     background-color: var(--color-background);
     color: var(--color-text);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 /* A11y: Reduce Motion */
@@ -224,7 +226,7 @@ a:hover {
 /* Masonry Grid (Simplistic) */
 .masonry-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
     gap: var(--space-lg);
 }
 
