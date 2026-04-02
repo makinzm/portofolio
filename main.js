@@ -270,6 +270,7 @@ if (mobileMenuBtn && navLinks) {
         navLinks.classList.remove('menu-open');
         mobileMenuBtn.setAttribute('aria-expanded', 'false');
         mobileMenuBtn.innerHTML = hamburgerSVG;
+        document.body.style.overflow = '';
     };
 
     mobileMenuBtn.addEventListener('click', (e) => {
@@ -281,6 +282,7 @@ if (mobileMenuBtn && navLinks) {
             navLinks.classList.add('menu-open');
             mobileMenuBtn.setAttribute('aria-expanded', 'true');
             mobileMenuBtn.innerHTML = closeSVG;
+            document.body.style.overflow = 'hidden';
         }
     });
 
