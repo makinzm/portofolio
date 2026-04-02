@@ -521,12 +521,12 @@ button.mobile-only {
     }
 
     .floating-nav {
-        position: relative;
+        position: fixed;
         top: 0;
         left: 0;
         right: 0;
         border-radius: 0;
-        margin-bottom: var(--space-xl);
+        margin-bottom: 0;
         z-index: 50;
     }
     
@@ -586,6 +586,6 @@ button.mobile-only {
     }
 
     .hero {
-        padding-top: 0;
+        padding-top: 80px;
     }
 }
