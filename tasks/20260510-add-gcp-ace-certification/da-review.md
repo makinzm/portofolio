@@ -2,7 +2,7 @@
 
 ## 概要
 - レビュワー: DA (Self)
-- 対象: GCP ACE Certification 追加
+- 対象: Google Cloud ACE Certification 追加
 - ステータス: ✅ LGTM
 
 ## レビュー観点と結果

@@ -1,4 +1,4 @@
-# GCP ACE Certification Add Task
+# Google Cloud ACE Certification Add Task
 
 ## Requirements
 - Add "Associate Cloud Engineer Certification" to the portfolio.
@@ -7,6 +7,6 @@
 
 ## Steps
 - [ ] 1. Analyze `index.html` and `main.js` to see how other achievements/certifications are implemented.
-- [ ] 2. Add the GCP ACE certification data.
+- [ ] 2. Add the Google Cloud ACE certification data.
 - [ ] 3. Run linting/formatting or tests if necessary.
 - [ ] 4. Perform DA review.

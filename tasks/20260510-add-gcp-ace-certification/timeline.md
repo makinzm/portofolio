@@ -1,10 +1,10 @@
-# Timeline: Adding GCP ACE Certification
+# Timeline: Adding Google Cloud ACE Certification
 
 ## Log
 ## Execution
 
 1. Added `card7` to `main.js` with translation keys for English and Japanese.
-2. Added the GCP ACE certification project card to `index.html` referencing `card7` translation keys.
+2. Added the Google Cloud ACE certification project card to `index.html` referencing `card7` translation keys.
 3. Ran `npm run test` and verified that tests pass.
 
 ```text
