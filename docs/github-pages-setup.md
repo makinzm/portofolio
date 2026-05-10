@@ -4,7 +4,7 @@
 
 If you want to view or test the portfolio locally before pushing to GitHub:
 
-1. **Install Dependencies**: Run `npm install` (or `volta run npm install` if using Volta).
+1. **Install Dependencies**: Run `npm install` (or `mise run npm install` if using mise).
 2. **Start Development Server**: Run `npm run dev`. This will start a local Vite server (usually at `http://localhost:5173`).
 3. **Run Automated Tests**: The portfolio includes Vitest setup for DOM checks. Run `npm run test` to verify the structure.
 4. **Preview Production Build**: To see how the built site will look run `npm run build` and then `npm run preview`.
