@@ -2,7 +2,7 @@
 
 ## Initial Setup
 - Initialized Vite project using Vanilla template
-- Fixed `package.json` creation error by using a temp directory initialization (`volta run npm create vite`)
+- Fixed `package.json` creation error by using a temp directory initialization (`mise run npm create vite`)
 - Created GitHub Actions setup for `deploy.yml` and `test.yml`
 - Set `base: './'` in `vite.config.js` for GitHub Pages support.
 
